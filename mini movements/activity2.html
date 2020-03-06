@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>boat</title>
+	<div id="ocean"></div>
+<div id="wholeship">
+<div id="ship-container">
+  <div class="ship">
+    <div class="deck">
+      <div class="roof"></div>
+    </div>
+    <div class="hull">
+      <div class="hull-top">
+      </div>
+    </div>
+  </div>
+
+<style type="text/css">
+	body {
+  background: blue;
+  padding: 0px;
+  margin: 0;
+  overflow: hidden;
+}
+h1 {
+	color: red;
+	text-shadow: 2px 2px yellow;
+}
+#ocean {
+  top: 300px;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background-color: navy;
+  z-index: 120;
+}
+
+#wholeship {
+  top: 200px;
+  height: 105px;
+  position: relative;
+  width: 450px;
+  }
+
+#ship-container {}
+
+#ship-container div {
+  position: absolute;
+}
+
+.hull {
+  border-right: 10px solid transparent;
+  border-top: 25px solid white;
+  border-left: 16px solid transparent;
+  width: 350px;
+  height: 0px;
+  top: 80px;
+  left: 50px;
+}
+
+.hull:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -40px;
+  left: -23px;
+  border-right: 10px solid transparent;
+  border-top: 17px solid white;
+  border-left: 7px solid transparent;
+  width: 376px;
+  height: 0px;
+}
+
+.hull:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -43px;
+  left: -24px;
+  border-right: 1px solid transparent;
+  border-top: 3px solid white;
+  border-left: 1px solid transparent;
+  width: 393px;
+  height: 0px;
+}
+
+
+.compartments-lower {
+  top: 46px;
+  left: 55px;
+  background-color: #cccccc;
+  border-top: solid 1px #999;
+  height: 10px;
+  width: 350px;
+  position: absolute;
+  z-index: 99;
+}
+
+#ship-container {
+  -webkit-animation: 5s ease-in-out 0s normal none infinite rockship;
+  -moz-animation: 5s ease-in-out 0s normal none infinite rockship;
+}
+@media only screen and ( max-width: 600px ){
+#wholeship {
+  -webkit-animation: moveship 60s linear infinite;
+  -moz-animation: moveship 60s linear infinite;
+  -o-animation: moveship 60s linear infinite;
+}
+}
+@media only screen and ( max-width: 1400px ){
+@keyframes moveship {
+  from {
+    left: -50%;
+  }
+  to {
+    left: 100%;
+  }
+}
+}
+
+@keyframes rockship {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  10% {
+    -webkit-transform: rotate(-.25deg);
+  }
+  20% {
+    -webkit-transform: rotate(-.5deg);
+  }
+  30% {
+    -webkit-transform: rotate(-.75deg);
+  }
+  40% {
+    -webkit-transform: rotate(-.5deg);
+  }
+  50% {
+    -webkit-transform: rotate(-.25deg);
+  }
+  60% {
+    -webkit-transform: rotate(0deg);
+  }
+  70% {
+    -webkit-transform: rotate(.25deg);
+  }
+  80% {
+    -webkit-transform: rotate(.5deg);
+  }
+  90% {
+    -webkit-transform: rotate(.25deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+  }
+}
+
+</style>
+<h1>
+	WITH THE POWER OF FLEX SEAL THIS BOAT IS BACK ON THE WATER IN NO TIME! </h1>
+</div>
